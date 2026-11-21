@@ -1,0 +1,24 @@
+:root{--cream:#fdf6e9;--olive:#c9bb5f;--blue:#c0d4e8;--maroon:#4a0f10;--pink:#f2c4cf}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:var(--blue);font-family:"Inter",system-ui,sans-serif;color:var(--maroon);padding:20px}
+.frame{width:100%;max-width:440px;background:var(--cream);border:1px solid var(--maroon);overflow:hidden}
+.strip{height:22px;background:repeating-linear-gradient(90deg,var(--olive) 0 38px,var(--cream) 38px 76px)}
+.strip.pink{background:repeating-linear-gradient(90deg,var(--pink) 0 20px,var(--cream) 20px 40px)}
+.dots{height:26px;background:radial-gradient(circle at 13px 13px,var(--maroon) 9px,transparent 10px) 0 0/52px 26px,var(--blue)}
+.content{padding:36px 36px 30px;text-align:center}
+.eyebrow{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;margin:0}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:2.1rem;margin:6px 0 20px}
+form{text-align:left}
+label{display:block;font-size:.8rem;font-weight:600;margin:14px 0 6px}
+input{width:100%;padding:11px 12px;border:1.5px solid var(--maroon);border-radius:6px;
+  background:#fff;font-size:.95rem;color:var(--maroon)}
+input:focus{outline:3px solid var(--blue)}
+.btn{display:inline-block;margin-top:22px;width:100%;padding:12px;border:1.5px solid var(--maroon);
+  background:var(--pink);color:var(--maroon);font-weight:700;font-size:.95rem;border-radius:6px;
+  cursor:pointer;text-decoration:none;text-align:center}
+.btn:hover{background:var(--olive)}
+.badge{width:70px;height:70px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;
+  justify-content:center;font-size:2rem;border:2px solid var(--maroon)}
+.badge.ok{background:var(--olive)}.badge.bad{background:var(--pink)}
+p{line-height:1.5}

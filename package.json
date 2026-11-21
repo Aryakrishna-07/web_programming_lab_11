@@ -1,0 +1,12 @@
+{
+  "name": "user-validation-app",
+  "version": "1.0.0",
+  "description": "Web programming lab: user login validation against a database",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.13" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2"
+  }
+}

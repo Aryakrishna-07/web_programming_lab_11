@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="frame">
+    <div class="strip"></div>
+    <div class="content">
+      <p class="eyebrow">Welcome back</p>
+      <h1>Sign in</h1>
+      <form action="/login" method="POST">
+        <label for="username">Login name</label>
+        <input type="text" id="username" name="username" placeholder="e.g. elia" required autocomplete="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+    <div class="dots"></div>
+    <div class="strip pink"></div>
+  </main>
+</body>
+</html>
