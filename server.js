@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const path = require("path");
 
 const app = express();
-const db = new DatabaseSync(path.join(__dirname, "users.db"));
+const db = new DatabaseSync(process.env.VERCEL ? ":memory:" : path.join(__dirname, "users.db"));
 
 // ---------- Database setup (table + pre-existing users) ----------
 db.exec(`CREATE TABLE IF NOT EXISTS users (
@@ -51,5 +51,8 @@ app.post("/login", (req, res) => {
     <a class="btn" href="/">Try again</a>`));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Running on http://localhost:${PORT}`));
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`Running on http://localhost:${PORT}`));
+}
+module.exports = app;
